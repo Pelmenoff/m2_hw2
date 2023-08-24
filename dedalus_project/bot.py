@@ -2,13 +2,15 @@ import difflib, datetime, requests, subprocess, os, sys
 from .classes import AddressBook, Name, Phone, Birthday, Email, Record
 from datetime import datetime
 from .notebook import Notebook
+from .output import ConsoleOutput
 
-bot_ver = 'Dedalus v1.2.4'
+bot_ver = 'Dedalus v1.2.5'
 
 API_KEY = "653c3ccd328356a16a58c6dbd440c093"
 
 address_book = AddressBook()
 notebook = Notebook()
+output = ConsoleOutput()
 save_path = "notebook_data.pickle"
 
 
@@ -409,22 +411,22 @@ def parser(text: str):
 def main():
     notebook.load_from_file(save_path)
 
-    print(f"/// \U0001F916 {bot_ver} loaded. Waiting for command. \"help\" to show list of all commands.")
+    output.display_message(f"/// \U0001F916 {bot_ver} loaded. Waiting for command. \"help\" to show list of all commands.")
 
     while True:
-        user_input = input("/// ---> ")
+        user_input = output.input("/// ---> ")
 
         cmd, data = parser(user_input)
 
         if cmd == unknown_handler:
-            print(f"/// Invalid command. Did you mean '{find_closest_command(user_input)}'?")
+            output.display_message(f"/// Invalid command. Did you mean '{find_closest_command(user_input)}'?")
             continue
 
         try:
             result = cmd(*data)
-            print(result)
+            output.display_message(result)
         except Exception as e:
-            print(f"/// Error: {e}")
+            output.display_message(f"/// Error: {e}")
 
         if cmd == exit_handler:
             address_book.save_data()
