@@ -1,0 +1,68 @@
+<html>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+      <div class="mermaid">
+    
+        classDiagram
+          class AddressBook {
+            file_path : str
+            add_record(name, phone, birthday, email)
+            get(name: str) Optional[Record]
+            get_all_contacts()
+            load_data()
+            save_data()
+          }
+          class AddressBookIterator {
+            index : int
+            records
+          }
+          class Birthday {
+            value
+            value : NoneType
+          }
+          class Email {
+            value
+            value : NoneType
+          }
+          class Field {
+            value
+          }
+          class Name {
+            value
+          }
+          class Notebook {
+            notes : dict
+            add_note()
+            delete_note()
+            edit_note()
+            load_from_file(filename)
+            save_to_file(filename)
+            show_all_notes()
+            view_note()
+          }
+          class Phone {
+            value
+            value : NoneType
+          }
+          class Record {
+            birthday : NoneType
+            email : NoneType
+            name
+            phones : list
+            add_email(email)
+            add_phone(phone)
+            change_phone(old_phone, new_phone)
+            days_to_birthday()
+          }
+          class WrongBirthdate {
+          }
+          class WrongEmail {
+          }
+          class WrongPhoneNumber {
+          }
+          Email --* Record : email
+          Name --* Record : name
+  
+       </div>
+  </body>
+</html>
