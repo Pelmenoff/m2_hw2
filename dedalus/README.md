@@ -1,4 +1,4 @@
-# Dedalus - Personal Assistant and Organizer
+# Dedalus v1.3.0 - Personal Assistant and Organizer
 
 Dedalus is a personal assistant and organizer built using Python. It allows you to manage contacts, notes, weather information, and more. This README provides an overview of the codebase and the available commands.
 
@@ -7,14 +7,9 @@ Dedalus is a personal assistant and organizer built using Python. It allows you 
 ### There is two ways how you can use Dedalus:
 
 ##### To install Dedalus on your device, follow these steps:
-1. Download dedalus_project-1.2.5-py3-none-any.whl file to your device.
-2. Install it using `pip install dedalus_project-1.2.5-py3-none-any.whl`.
-3. Run cmd or powershell and activate Dedalus using `dedalusrun` command.
-
-##### If you want to use Dedalus without installing, follow these steps:
 1. Clone or download the repository to your local machine.
-2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Run `py -m dedalus_project.bot` in your preferred Python environment.
+2. Install and initiate poetry virtual environment `pip install poetry`; `poetry install`; `poetry shell`; .
+3. Activate Dedalus in terminal using `py -m dedalus.bot` command.
 
 ## Features
 -Add, manage, and search for contacts with names, phone numbers, birthdays, and emails.

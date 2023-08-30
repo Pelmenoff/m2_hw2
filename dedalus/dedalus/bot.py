@@ -4,7 +4,7 @@ from datetime import datetime
 from .notebook import Notebook
 from .output import ConsoleOutput
 
-bot_ver = 'Dedalus v1.2.5'
+bot_ver = 'Dedalus v1.3.0'
 
 API_KEY = "653c3ccd328356a16a58c6dbd440c093"
 
@@ -12,6 +12,7 @@ address_book = AddressBook()
 notebook = Notebook()
 output = ConsoleOutput()
 save_path = "notebook_data.pickle"
+
 
 
 def input_error(func):
