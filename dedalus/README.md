@@ -1,4 +1,4 @@
-# Dedalus v1.3.0 - Personal Assistant and Organizer
+# Dedalus v1.3.1 - Personal Assistant and Organizer
 
 Dedalus is a personal assistant and organizer built using Python. It allows you to manage contacts, notes, weather information, and more. This README provides an overview of the codebase and the available commands.
 

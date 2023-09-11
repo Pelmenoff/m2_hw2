@@ -4,7 +4,7 @@ from datetime import datetime
 from .notebook import Notebook
 from .output import ConsoleOutput
 
-bot_ver = 'Dedalus v1.3.0'
+bot_ver = 'Dedalus v1.3.1'
 
 API_KEY = "653c3ccd328356a16a58c6dbd440c093"
 
